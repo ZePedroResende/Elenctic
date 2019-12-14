@@ -1,0 +1,110 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-react-jsx-source": "^7.2.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.5.1",
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "classnames": "^2.2.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "core-js": "^3.2.1",
+    "css-loader": "^3.3.2",
+    "cssnano": "^4.1.10",
+    "file-loader": "^5.0.2",
+    "framer-motion": "^1.6.7",
+    "framesync": "^4.0.4",
+    "humps": "^2.0.1",
+    "lodash": "^4.17.15",
+    "lodash.uniqueid": "^4.0.1",
+    "phoenix": "^1.4.9",
+    "popmotion": "^8.7.0",
+    "postcss-calc": "^7.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-simple-vars": "^5.0.2",
+    "precss": "^4.0.0",
+    "react": "^16.9.0",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-dropzone": "^10.1.7",
+    "react-hot-loader": "^4.12.11",
+    "react-particles-js": "^2.7.0",
+    "react-pose": "^4.0.8",
+    "react-select": "^3.0.8",
+    "react-svg-loader": "^3.0.3",
+    "style-loader": "^1.0.1",
+    "three": "^0.111.0",
+    "url-loader": "^3.0.0",
+    "webpack": "4.41.2",
+    "webpack-cli": "^3.3.2",
+    "wouter": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@testing-library/react": "^9.1.4",
+    "bulma": "^0.8.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "jest": "^24.9.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^8.0.0",
+    "stylelint-order": "^3.0.0",
+    "webpack-dev-server": "^3.5.0",
+    "xhr-mock": "^2.5.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "three*": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "root(.*)$": "<rootDir>/frontend/src/$1",
+      "framer-motion": "<rootDir>/__mocks__/framerMotion.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(wouter)/)"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint --ext js,jsx frontend/src",
+    "lint-styles": "stylelint frontend/src/**/*.css  frontend/src/**/*.module.css",
+    "build": "NODE_ENV=production webpack --mode production",
+    "dev": "webpack-dev-server --hot",
+    "test": "NODE_ENV=test jest frontend"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

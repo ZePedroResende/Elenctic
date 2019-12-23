@@ -6,7 +6,7 @@ config :elenctic, Elenctic.Repo,
   password: "postgres",
   database: "elenctic_dev",
   hostname: "localhost",
-  port: 5433
+  port: 5433,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -71,3 +71,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :elenctic, Elenctic.UserManager.Guardian,
+  secret_key: "TP8yk9R6EKjszajE6t/AVYfwuIyp3PGi+wrzk5kl/MRmYyf0Aq3OPgGaKHR++g7u"
